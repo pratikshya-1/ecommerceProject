@@ -4,7 +4,7 @@ include("connect.php");
 $totalCartAmount=0;
 
 include "functions.php";
-if (isset($_POST["login"])) {
+if (isset($_POST["login"])) { lkl;kfd;l
     include "connect.php";
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -117,24 +117,23 @@ if(isset($_POST['checkoutConnectIps'])){
 
 
   ?>
-  <form action="https://uat.connectips.com:7443/connectipswebgw/loginpage" method="post" id="cipsLoginForm">
-  <input type="hidden" name="MERCHANTID" id="MERCHANTID" value="<?php echo $merchantId; ?>" readonly/>
-   <input type="hidden" name="APPID" id="APPID" value="<?php echo $appId; ?>" readonly/> 
-   <input type="hidden" name="APPNAME" id="APPNAME" value="<?php echo $appName; ?>" readonly/>
-   <input type="hidden" name="TXNID" id="TXNID" value="<?php echo $tranId; ?>" readonly/> 
-   <input type="hidden" name="TXNDATE" id="TXNDATE" value="<?php echo $tranDate;  ?>" readonly/>
-   <input type="hidden" name="TXNCRNCY" id="TXNCRNCY" value="<?php echo $tranCurrency; ?>" readonly/>
-   <input type="hidden" name="TXNAMT" id="TXNAMT" value="<?php echo $tranAmt;  ?>"readonly/>
-  <input type="hidden" name="REFERENCEID" id="REFERENCEID" value="<?php echo $refId; ?>" readonly/>
-   <input type="hidden" name="REMARKS" id="REMARKS" value="<?php echo $remarks;  ?>" readonly/> 
-  <input type="hidden" name="PARTICULARS" id="PARTICULARS" value="<?php echo $particulars;  ?>" readonly/>
-  <input type="hidden" name="TOKEN" id="TOKEN" rows="9" value="<?php echo $token;?>" readonly >
-  
- </form>
+<form action="https://uat.connectips.com:7443/connectipswebgw/loginpage" method="post" id="cipsLoginForm">
+    <input type="hidden" name="MERCHANTID" id="MERCHANTID" value="<?php echo $merchantId; ?>" readonly />
+    <input type="hidden" name="APPID" id="APPID" value="<?php echo $appId; ?>" readonly />
+    <input type="hidden" name="APPNAME" id="APPNAME" value="<?php echo $appName; ?>" readonly />
+    <input type="hidden" name="TXNID" id="TXNID" value="<?php echo $tranId; ?>" readonly />
+    <input type="hidden" name="TXNDATE" id="TXNDATE" value="<?php echo $tranDate;  ?>" readonly />
+    <input type="hidden" name="TXNCRNCY" id="TXNCRNCY" value="<?php echo $tranCurrency; ?>" readonly />
+    <input type="hidden" name="TXNAMT" id="TXNAMT" value="<?php echo $tranAmt;  ?>" readonly />
+    <input type="hidden" name="REFERENCEID" id="REFERENCEID" value="<?php echo $refId; ?>" readonly />
+    <input type="hidden" name="REMARKS" id="REMARKS" value="<?php echo $remarks;  ?>" readonly />
+    <input type="hidden" name="PARTICULARS" id="PARTICULARS" value="<?php echo $particulars;  ?>" readonly />
+    <input type="hidden" name="TOKEN" id="TOKEN" rows="9" value="<?php echo $token;?>" readonly>
 
- <script>
-  document.getElementById("cipsLoginForm").submit();   //auto submit form
+</form>
 
+<script>
+document.getElementById("cipsLoginForm").submit(); //auto submit form
 </script>
 
 
@@ -143,7 +142,7 @@ if(isset($_POST['checkoutConnectIps'])){
 
 
 
-  <?php
+<?php
 
 } else if(isset($_POST['checkoutEsewa'])){
 
@@ -192,7 +191,7 @@ if(isset($_POST['checkoutConnectIps'])){
    ?>
 
 
-    <form action="https://uat.esewa.com.np/epay/main" id="esewaForm" method="POST">
+<form action="https://uat.esewa.com.np/epay/main" id="esewaForm" method="POST">
     <input value="<?php echo $totalPaymentAmount;?>" name="tAmt" type="hidden">
     <input value="<?php echo $totalPaymentAmount;?>" name="amt" type="hidden">
     <input value="0" name="txAmt" type="hidden">
@@ -202,17 +201,17 @@ if(isset($_POST['checkoutConnectIps'])){
     <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
     <input value="http://localhost/esewa_payment_success?q=su" type="hidden" name="su">
     <input value="http://localhost/esewa_payment_failed?q=fu" type="hidden" name="fu">
-    </form>
+</form>
 
 
-   <script>
-    document.getElementById("esewaForm").submit();   //auto submit form
-  </script>
+<script>
+document.getElementById("esewaForm").submit(); //auto submit form
+</script>
 
 
 
 
-   <?php
+<?php
 
 
 
@@ -239,127 +238,134 @@ if(isset($_POST['checkoutConnectIps'])){
 <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 
 <div class="container">
-  <h2>Your Cart</h2>
+    <h2>Your Cart</h2>
 
 
-             <?php if(isset($_GET['msg'])&& $_GET['msg']=="invaliduser")
+    <?php if(isset($_GET['msg'])&& $_GET['msg']=="invaliduser")
             {?>
-             <div style="font-size:18px; color:#FF0000;">Invalid Username or passowrd</div>
-             <?php }
+    <div style="font-size:18px; color:#FF0000;">Invalid Username or passowrd</div>
+    <?php }
 
 
               if(isset($_GET['msg'])&& $_GET['msg']=="loginsuccess")
             {
             ?>
-             <font color="#009900">Login Successful.</font>
-       <?php } ?>
+    <font color="#009900">Login Successful.</font>
+    <?php } ?>
 
-  <form action="#" method="POST">          
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Product Name</th>
-        <th>Image</th>
-        <th>Qty</th>
-        <th>Price per unit</th>
-        <th>Total</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
+    <form action="#" method="POST">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Image</th>
+                    <th>Qty</th>
+                    <th>Price per unit</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
 
-<?php 
+                <?php 
    
      foreach ($_SESSION['cart'] as $key => $value) {
      	$totalCartAmount=$totalCartAmount+($value['productPrice']*$value['productQty']); 
         ?>
 
-         <tr>
-        <td><?php echo $value['productName']; ?></td>
-        <td><img src="assets/images/<?php echo $value['imgLoc']; ?>" height="100px" width="100px"></td>
-        <td><?php echo $value['productQty']; ?></td>
-        <td><?php echo $value['productPrice']; ?></td>
-        <td><?php echo $value['productPrice']*$value['productQty']; ?></td>
-        <td><button type="button" class="btn btn-danger" onClick="removeProductFromCart('<?php echo $key; ?>')">Remove</button></td>
-      </tr>
+                <tr>
+                    <td><?php echo $value['productName']; ?></td>
+                    <td><img src="assets/images/<?php echo $value['imgLoc']; ?>" height="100px" width="100px"></td>
+                    <td><?php echo $value['productQty']; ?></td>
+                    <td><?php echo $value['productPrice']; ?></td>
+                    <td><?php echo $value['productPrice']*$value['productQty']; ?></td>
+                    <td><button type="button" class="btn btn-danger"
+                            onClick="removeProductFromCart('<?php echo $key; ?>')">Remove</button></td>
+                </tr>
 
 
 
 
-        <?php
+                <?php
     }
 ?>
 
 
-  <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Total = <?php echo $totalCartAmount;?> </td>
-        <td>
-          <!-- <button type="submit" name="checkout" id="checkout" class="btn btn-success">Checkout</button> -->
-          Checkout
-            <?php if(isset($_SESSION['ISLOGIN'])) { ?>
-          <button type="submit" name="checkoutConnectIps" id="checkoutConnectIps" class="btn"><img src="assets/images/cips_logo.png" height="50px" width="50px"></button>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total = <?php echo $totalCartAmount;?> </td>
+                    <td>
+                        <!-- <button type="submit" name="checkout" id="checkout" class="btn btn-success">Checkout</button> -->
+                        Checkout
+                        <?php if(isset($_SESSION['ISLOGIN'])) { ?>
+                        <button type="submit" name="checkoutConnectIps" id="checkoutConnectIps" class="btn"><img
+                                src="assets/images/cips_logo.png" height="50px" width="50px"></button>
 
 
-            <button type="submit" name="checkoutEsewa" id="checkoutEsewa" class="btn"><img src="assets/images/esewa_epay_logo.png" height="50px" width="50px"></button>
-          <?php }else { ?>
+                        <button type="submit" name="checkoutEsewa" id="checkoutEsewa" class="btn"><img
+                                src="assets/images/esewa_epay_logo.png" height="50px" width="50px"></button>
+                        <?php }else { ?>
 
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">
-  Login to checkout
-</button>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">
+                            Login to checkout
+                        </button>
 
-            <?php
+                        <?php
 
           } ?>
 
-        </td>
-      </tr>
+                    </td>
+                </tr>
 
-     
-   
-    </tbody>
-  </table>
-  </form>
+
+
+            </tbody>
+        </table>
+    </form>
 </div>
 
 
 <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    
-      <div class="modal-body">
-          <div class="row">
-    <div class="col-md-9 mx-auto">
-      <form class="form-signin" action="#" method="POST">
-        <h1 class="h3 mb-3 font-weight-normal text-center"> Sign in</h1>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
-         
-
-        
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <form class="form-signin" action="#" method="POST">
+                            <h1 class="h3 mb-3 font-weight-normal text-center"> Sign in</h1>
 
 
-        <label for="username" class="sr-only">Username</label>
-        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
-        <div class="mb-3"></div>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-        <div class="mb-3">
-          <a href="forgetPassword.php">Forget Password</a>
+
+
+
+
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                                required autofocus>
+                            <div class="mb-3"></div>
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" name="password" class="form-control"
+                                placeholder="Password" required>
+                            <div class="mb-3">
+                                <a href="forgetPassword.php">Forget Password</a>
+                            </div>
+                            <div class="col-md-6 mx-auto"><button name="login" class="btn btn-lg btn-primary btn-block"
+                                    type="submit">Sign in</button></div>
+                            <div class="mb-3"> Does not have an account? <a href="register.php"> New Register</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="col-md-6 mx-auto"><button name="login" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button></div>
-        <div class="mb-3"> Does not have an account? <a href="register.php"> New Register</a>
-        </div>
-      </form>
     </div>
-  </div>
-      </div>
-    
-    </div>
-  </div>
 </div>
 
 
@@ -372,33 +378,33 @@ if(isset($_POST['checkoutConnectIps'])){
 <!--JS below-->
 
 <script type="text/javascript">
-	
-	function removeProductFromCart(productKey){
-  alert(productKey);
+function removeProductFromCart(productKey) {
+    alert(productKey);
 
 
 
 
-   $.ajax({    
+    $.ajax({
         type: "POST",
-        url: "delete_product_from_cart.php",             
-        dataType: "json",   
-         data : {productKey :productKey},            
-        success: function(data){ 
-        if(data.status=="success"){
-        	window.location.reload();
-          
-           
-        }
-                       
+        url: "delete_product_from_cart.php",
+        dataType: "json",
+        data: {
+            productKey: productKey
+        },
+        success: function(data) {
+            if (data.status == "success") {
+                window.location.reload();
+
+
+            }
+
         },
         error: function(response) {
-        console.log('ERROR BLOCK');
-        console.log(response);
-    }
+            console.log('ERROR BLOCK');
+            console.log(response);
+        }
 
 
     });
 }
-
 </script>
