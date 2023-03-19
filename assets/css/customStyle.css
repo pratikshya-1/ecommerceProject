@@ -1,0 +1,21 @@
+.form-error-message{
+	font-size: 10px;
+	color: red;
+}
+
+
+.product-model-img img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+.badge {
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background:#9ec8c6;
+}
